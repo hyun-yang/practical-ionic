@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>로그인</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list lines="none">
+		<form [formGroup]="userForm">
+			<ion-item>
+				<ion-label position="floating">이메일</ion-label>
+				<ion-input type="email" placeholder="이메일 주소를 입력하세요" formControlName="email" required></ion-input>
+			</ion-item>
+
+			<ion-item *ngIf="isSubmitted && !userForm.controls.email.valid">
+				<p>정상적인 이메일 주소가 아닙니다.</p>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating">비밀번호</ion-label>
+				<ion-input type="password" placeholder="비밀번호를 입력하세요" formControlName="password" required></ion-input>
+			</ion-item>
+
+			<ion-item *ngIf="isSubmitted && !userForm.controls.password.valid">
+				<p>비밀번호가 일치하지 않습니다.</p>
+			</ion-item>
+
+		</form>
+	</ion-list>
+
+	<div class="ion-text-center">
+		<ion-button shape="round" fill="solid" (click)="signIn()">로그인</ion-button>
+	</div>
+
+	<div class="align-bottom ion-text-center">
+		<ion-button fill="clear" (click)="forgotPassword()">비밀번호 찾기</ion-button>
+		<ion-button fill="clear" (click)="signUp()">회원 가입</ion-button>
+	</div>
+</ion-content>

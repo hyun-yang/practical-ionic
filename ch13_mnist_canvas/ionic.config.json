@@ -1,0 +1,7 @@
+{
+  "name": "ch13_mnist_canvas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

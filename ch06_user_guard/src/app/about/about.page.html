@@ -1,0 +1,15 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>소개</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<div class="ion-text-center">
+		<h3>사용자 정보</h3>
+		<p>이름 : {{userInfo?.displayName}}</p>
+		<p>이메일 : {{userInfo?.email}}</p>
+	</div>
+</ion-content>

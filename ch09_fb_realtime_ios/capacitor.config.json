@@ -1,0 +1,20 @@
+{
+  "appId": "io.mycompany.kmeetup",
+  "appName": "KMeetUp",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "CapacitorFirebaseAuth": {
+      "providers": ["google.com", "apple.com", "facebook.com"],
+      "languageCode": "en",
+      "nativeAuth": false,
+      "properties": {
+        "google": {
+        }
+      },
+      "permissions": {
+        "google": ["profile", "email"]
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			RxJS 와 페이징
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="showSearchBar=true">
+				<ion-icon slot="icon-only" name="search"></ion-icon>
+			</ion-button>
+			<ion-button (click)="refresh()">
+				<ion-icon slot="icon-only" name="refresh"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+	<ion-toolbar *ngIf="showSearchBar">
+		<ion-searchbar *ngIf="showSearchBar" showCancelButton="focus" (ionCancel)="showSearchBar=false"
+									 (search)="onSearch($event)" placeholder="찾기..."></ion-searchbar>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let item of items">
+			<ion-label>
+				<h2>{{ item?.name }}</h2>
+			</ion-label>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col size="6">
+			<ion-button disabled="{{firstOfData}}" expand="block" fill="solid" color="primary" (click)="getPrev()">
+				<ion-icon name="chevron-back-outline" slot="start"></ion-icon>
+			</ion-button>
+		</ion-col>
+		<ion-col size="6">
+			<ion-button disabled="{{endOfData}}" expand="block" fill="solid" color="secondary" (click)="getNext()">
+				<ion-icon name="chevron-forward-outline" slot="start"></ion-icon>
+			</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

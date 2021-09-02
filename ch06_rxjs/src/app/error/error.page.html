@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-toolbar color="tertiary">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{operatorName}}</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="catchErrorTest()">CE</ion-button>
+			<ion-button (click)="retryTest()">RT</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-textarea auto-grow="true" [(ngModel)]="output"></ion-textarea>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="clear()">
+				초기화
+			</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

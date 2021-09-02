@@ -1,0 +1,150 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start ch07 blank --type=angular --cordova
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+npm i firebase --save
+
+npm i @angular/fire --save
+
+npm i @ionic/lab --save-dev
+
+**페이지 추가**
+
+ionic g page login
+
+ionic g page signup
+
+ionic g page forgotpassword
+
+ionic g page meetupDetail
+
+ionic g page setting
+
+ionic g page about
+
+**서비스 추가**
+
+ionic g service services/data
+
+ionic g service services/authentication
+
+ionic g service services/util
+
+ionic g service services/authenticationGuard
+
+**AndroidX 추가**
+
+ionic cordova plugin add cordova-plugin-androidx
+
+ionic cordova plugin add cordova-plugin-androidx-adapter
+
+
+**안드로이드 minSdkVersion 버전 정보 추가** 
+
+config.xml 파일을 열고 아래 처럼 안드로이드 minSdkVersion 버전 정보 추가
+
+<preference name="android-minSdkVersion" value="23" />
+
+**google-services.json, GoogleService-Info.plist 구성 파일 복사**
+
+안드로이드용 파이어베이스 구성 파일은 안드로이드 플랫폼을 추가한 후 해당 폴더에 복사합니다.
+
+google-services.json
+
+iOS용 파이어베이스 구성 파일은 Xcode로 추가합니다.
+
+GoogleService-Info.plist
+
+
+## 코도바 프로젝트
+
+**구글 플러스**
+
+ionic cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=해당 값
+
+npm i @ionic-native/google-plus --save
+
+npm i @ionic-native/core --save
+
+**페이스북**
+
+ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="해당 값" --variable APP_NAME="KMeetUp_App"
+
+npm install @ionic-native/facebook --save
+
+**애플**
+
+ionic cordova plugin add cordova-plugin-sign-in-with-apple
+
+npm i @ionic-native/sign-in-with-apple --save
+
+**구글맵**
+
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="구글 맵 키" --variable API_KEY_FOR_IOS="구글 맵 키"
+
+npm i @ionic-native/google-maps --save
+
+**위치 정보**
+
+ionic cordova plugin add cordova-plugin-geolocation@4.0.2 --save
+
+npm uninstall @ionic-native/geolocation@5.16.0 --save
+
+**알림 메시지**
+
+**1) 안드로이드**
+
+ionic cordova plugin add cordova-plugin-fcm-with-dependecy-updated@7.2.0
+
+npm i @ionic-native/fcm@5.28.0 --save
+
+**2) iOS**
+
+ionic cordova plugin add cordova-plugin-firebase-messaging
+
+npm i @ionic-native/firebase-messaging
+
+
+## 커패시터 프로젝트
+
+ionic start ch07_ios blank --type=angular --capacitor
+
+**패키지 설치**
+
+npm i firebase --save
+
+npm i @angular/fire --save
+
+npm i @capacitor/splash-screen --save
+
+npm i @capacitor/ios
+
+npm i @ionic/lab --save-dev
+
+**커패시터 설정**
+
+npx cap init KMeetUp io.mycompany.kmeetup
+
+**구글, 페이스북,애플 로그인**
+
+npm i capacitor-firebase-auth@3.0.0-rc.0 --save
+
+**구글맵**
+
+npm i @capacitor-community/capacitor-googlemaps-native --save
+
+**위치 정보**
+
+npm i @capacitor/geolocation --save
+
+**알림 메시지**
+
+npm i @capacitor/push-notifications --save
+
+## 아이오닉 프로젝트 실행
+
+ionic serve --lab

@@ -1,0 +1,55 @@
+ion-list ion-item {
+	color: red;
+}
+
+ion-list > div > ion-item {
+	color: green;
+}
+
+ion-footer {
+	font-size: 1em;
+	background-color: lightgrey;
+}
+
+$width: 100px;
+$height: 100px;
+
+.button-half {
+	width: $width / 2;
+}
+
+.button-small {
+	width: $width / 4;
+}
+
+@mixin square($size, $color) {
+	width: $size;
+	height: $size;
+	background-color: $color;
+}
+
+.small-green-square {
+	@include square(30px, rgb(0, 255, 0));
+}
+
+.big-red-square {
+	@include square(300px, rgb(255, 0, 0));
+}
+
+.basic-button {
+	box-sizing: border-box;
+	color: #ffffff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+	padding: 5px;
+}
+
+.extend-button1 {
+	@extend .basic-button;
+	background-color: #ffe601;
+}
+
+.extend-button2 {
+	@extend .basic-button;
+	background-color: #7900ff;
+}
+

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>모임 리스트</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let meetup of meetupList">
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h2>{{meetup.title}}</h2>
+        <p>{{meetup.description}}</p>
+      </ion-label>
+
+      <ion-button color="primary" slot="end" (click)="goDetailPage(meetup)">
+        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

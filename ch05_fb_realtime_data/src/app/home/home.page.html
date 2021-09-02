@@ -1,0 +1,54 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>총 갯수 {{testList?.length}} </ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let test of testList">
+			<ion-label class="ion-text-wrap">
+				<p>{{test.name}}</p>
+				<p>{{test.title}}</p>
+				<p>{{test.description}}</p>
+			</ion-label>
+
+			<ion-button color="primary" (click)="updateTestDataById(test.id)">
+				<ion-icon slot="icon-only" name="list"></ion-icon>
+			</ion-button>
+
+			<ion-button color="secondary" (click)="deleteTestDataById(test.id)">
+				<ion-icon slot="icon-only" name="trash"></ion-icon>
+			</ion-button>
+		</ion-item>
+	</ion-list>
+
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button>
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+		<ion-fab-list side="top">
+			<ion-fab-button color="light" (click)="deleteAllTestData()">
+				<ion-icon name="close"></ion-icon>
+			</ion-fab-button>
+			<ion-fab-button color="light" (click)="createAllTestData()">
+				<ion-icon name="add"></ion-icon>
+			</ion-fab-button>
+		</ion-fab-list>
+	</ion-fab>
+
+</ion-content>
+<ion-footer>
+	<ion-row>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="createAllTestData()">
+				테스트 데이터 생성
+			</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="danger" (click)="deleteAllTestData()">
+				테스트 데이터 삭제
+			</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

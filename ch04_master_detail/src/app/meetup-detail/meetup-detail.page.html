@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{meetup.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="meetup">
+  <ion-item>{{meetup.id}}</ion-item>
+  <ion-item>{{meetup.title}}</ion-item>
+  <ion-item>{{meetup.description}}</ion-item>
+</ion-content>

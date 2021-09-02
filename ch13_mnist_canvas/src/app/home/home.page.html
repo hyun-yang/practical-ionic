@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			숫자 인식
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-text-center">
+		<h2>판별 숫자는 : {{predictedLabel}}</h2>
+	</div>
+
+	<div class="center">
+		<canvas #mnistCanvas (touchstart)="startDrawing($event)"
+						(touchmove)="moveDrawing($event)"
+						(touchend)="endDrawing($event)"></canvas>
+	</div>
+
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="predict()">숫자 인식</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="clear()">다시 쓰기</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>
+

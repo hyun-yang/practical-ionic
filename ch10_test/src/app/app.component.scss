@@ -1,0 +1,16 @@
+.header-background-image {
+	height: 200px;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-image: url("../assets/logo.jpg") !important;
+}
+
+.userInfo {
+	position: absolute;
+	left: 1em;
+	bottom: 0em;
+	color: #5e5e5e;
+	line-height: 0.1;
+	font-weight: bold;
+}

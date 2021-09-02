@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>모임 목록</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let item of testList">
+		<ion-item>
+			<ion-icon ios="map-outline" md="map-sharp" slot="start"></ion-icon>
+			<ion-label>{{item.title}}</ion-label>
+			<ion-button fill="outline" slot="end" (click)="showDetail(item)">장소</ion-button>
+		</ion-item>
+		<ion-card-content>
+			{{item.description}}
+		</ion-card-content>
+		<ion-row>
+			<ion-col>
+				<ion-button class="likes" fill="clear" size="small">
+					<ion-icon slot="icon-only" ios="heart-outline" md="heart-sharp"></ion-icon>
+					<div>{{10}} Likes</div>
+				</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button class="comment" fill="clear" size="small">
+					<ion-icon slot="icon-only" ios="chatbubble-outline" md="chatbubble-sharp"></ion-icon>
+					<div>{{5}} Comment</div>
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+</ion-content>

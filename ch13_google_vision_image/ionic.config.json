@@ -1,0 +1,7 @@
+{
+  "name": "ch13_google_vision_image",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

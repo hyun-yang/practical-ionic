@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>회원 가입</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <form [formGroup]="userForm">
+      <ion-item>
+        <ion-label position="floating">이 름</ion-label>
+        <ion-input type="text" placeholder="이름을 입력하세요" formControlName="username" required></ion-input>
+      </ion-item>
+      <ion-item *ngIf="isSubmitted && !userForm.controls.username.valid">
+        <p>정상적인 이름이 아닙니다.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">이메일</ion-label>
+        <ion-input type="email" placeholder="이메일 주소를 입력하세요" formControlName="email" required></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="isSubmitted && !userForm.controls.email.valid">
+        <p>정상적인 이메일 주소가 아닙니다.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">비밀번호</ion-label>
+        <ion-input type="password" placeholder="비밀번호를 입력하세요" formControlName="password" required></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="isSubmitted && !userForm.controls.password.valid">
+        <p>올바른 비밀번호가 아닙니다.</p>
+      </ion-item>
+
+      <div class="ion-text-center">
+        <ion-button type="submit" color="primary" shape="round" fill="solid" (click)="onSubmit()"
+                    [disabled]="!userForm.valid">가입하기
+        </ion-button>
+      </div>
+    </form>
+  </ion-list>
+</ion-content>

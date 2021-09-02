@@ -1,0 +1,13 @@
+{
+  "appId": "io.ch14mnist",
+  "appName": "MyMNIST",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

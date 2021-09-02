@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{"MAP" | translate}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="saveMeetUp()">
+        <ion-icon slot="icon-only" ios="save-outline" md="save-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+
+  <ion-grid class="ion-no-padding">
+    <form [formGroup]="userForm">
+      <ion-item>
+        <ion-icon slot="start" size="small" ios="person-outline" md="person-sharp"></ion-icon>
+        <ion-input type="text" placeholder="{{'OWNER' | translate}}" formControlName="name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" size="small" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+        <ion-input type="text" placeholder="{{'TITLE' | translate}}" formControlName="title" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" size="small" ios="reader-outline" md="reader-sharp"></ion-icon>
+        <ion-textarea style="white-space: pre-wrap;" placeholder="{{'DESCRIPTION' | translate}}"
+                      formControlName="description" required></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" size="small" ios="call-outline" md="call-sharp"></ion-icon>
+        <ion-input class="underline-blue-text" type="text" placeholder="{{'TEL' | translate}}"
+                   formControlName="phone" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" size="small" ios="calendar-outline" md="calendar-sharp"></ion-icon>
+        <ion-datetime displayFormat="DD/MM/YYYY HH:mm" [min]="minDate" minuteValues="0,15,30"
+                      placeholder="{{'DATE' | translate}}" formControlName="date" required></ion-datetime>
+      </ion-item>
+    </form>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <div class="ion-text-center">
+    <ion-button fill="solid" color="primary" (click)="saveMeetUp()">
+      <ion-icon slot="start" ios="save-outline" md="save-sharp"></ion-icon>
+      {{"SAVE" | translate}}
+    </ion-button>
+  </div>
+</ion-footer>

@@ -1,0 +1,13 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start ch10_test blank --type=angular
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+npm i ngx-translate-testing --save-dev
+
+## 아이오닉 프로젝트 실행
+
+npm test

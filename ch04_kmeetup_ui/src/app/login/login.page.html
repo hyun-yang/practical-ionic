@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>함께 모임</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="logo" src="assets/logo.jpg" alt="">
+
+  <div class="ion-text-center">
+    <ion-button fill="outline" style="color: #bf360c" size="small" (click)="signInWithGoogle()">
+      <ion-icon name="logo-google"></ion-icon>
+      <span>구글 계정으로 로그인</span>
+    </ion-button>
+    <ion-button fill="outline" style="color: #3949ab" size="small" (click)="signInWithFacebook()">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <span>페이스북 계정으로 로그인</span>
+    </ion-button>
+    <ion-button fill="outline" style="color: #64B5F6" size="small" (click)="signInWithApple()">
+      <ion-icon name="logo-apple"></ion-icon>
+      <span>애플 계정으로 로그인</span>
+    </ion-button>
+  </div>
+
+  <ion-list lines="none">
+    <form>
+      <ion-item>
+        <ion-label position="floating">이메일</ion-label>
+        <ion-input type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">비밀번호</ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <div class="ion-text-center">
+    <ion-button shape="round" fill="solid" (click)="signIn()">로그인</ion-button>
+  </div>
+
+  <div class="align-bottom ion-text-center">
+    <ion-button fill="clear" (click)="forgotPassword()">비밀번호 찾기</ion-button>
+    <ion-button fill="clear" (click)="signUp()">회원 가입</ion-button>
+  </div>
+</ion-content>

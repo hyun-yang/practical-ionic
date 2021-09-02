@@ -1,0 +1,79 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{"MAP" | translate}}</ion-title>
+		<ion-buttons slot="end">
+			<ion-button *ngIf="meetup?.uid === userInfo.uid" (click)="updateMeetUp()">
+				<ion-icon slot="icon-only" ios="save-outline" md="save-sharp"></ion-icon>
+			</ion-button>
+			<ion-button *ngIf="meetup?.uid === userInfo.uid" (click)="deleteMeetUp()">
+				<ion-icon slot="icon-only" ios="trash-outline" md="trash-sharp"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div #map id="map"></div>
+
+	<ion-grid class="ion-no-padding">
+		<ion-item lines="none">
+			<ion-icon slot="start" size="small" ios="person-outline" md="person-sharp"></ion-icon>
+			<ion-input [disabled]="true" *ngIf="meetup" [(ngModel)]="meetup.name"></ion-input>
+		</ion-item>
+
+		<ion-item lines="none">
+			<ion-icon slot="start" size="small" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+			<ion-input [disabled]="meetup.uid !== userInfo.uid" *ngIf="meetup" [(ngModel)]="meetup.title"></ion-input>
+		</ion-item>
+
+		<ion-item lines="none">
+			<ion-icon slot="start" size="small" ios="reader-outline" md="reader-sharp"></ion-icon>
+			<ion-textarea style="white-space: pre-wrap;" [disabled]="meetup.uid !== userInfo.uid" *ngIf="meetup"
+										[(ngModel)]="meetup.description"></ion-textarea>
+		</ion-item>
+
+		<ion-item lines="none">
+			<ion-icon slot="start" size="small" ios="call-outline" md="call-sharp"></ion-icon>
+			<ion-input class="underline-blue-text" *ngIf="meetup" [hidden]="(meetup.uid !== userInfo.uid)"
+								 [(ngModel)]="meetup.phone"></ion-input>
+			<ion-label class="underline-blue-text" *ngIf="meetup" [hidden]="(meetup.uid === userInfo.uid)"
+								 (click)="call(meetup.phone)">{{meetup.phone}}</ion-label>
+		</ion-item>
+
+		<ion-item lines="none">
+			<ion-icon slot="start" size="small" ios="calendar-outline" md="calendar-sharp"></ion-icon>
+			<ion-datetime displayFormat="DD/MM/YYYY HH:mm" [disabled]="meetup.uid !== userInfo.uid" *ngIf="meetup"
+										[(ngModel)]="meetup.date" minuteValues="0,15,30"></ion-datetime>
+		</ion-item>
+	</ion-grid>
+
+	<ion-row>
+		<ion-col>
+			<ion-item lines="none">
+				<ion-icon slot="start" size="small" ios="document-text-outline" md="document-text-sharp"></ion-icon>
+				<ion-label>{{"COMMENT" | translate}} ({{this.meetup?.comments?.length}})</ion-label>
+			</ion-item>
+		</ion-col>
+	</ion-row>
+
+	<ion-list class="ion-no-padding">
+		<ion-item *ngFor="let meetupComment of this.meetup?.comments">
+			<ion-label class="comment-text">{{meetupComment?.comment}}</ion-label>
+			<ion-button slot="end" *ngIf="meetupComment?.uid === userInfo.uid" (click)="deleteComment(meetupComment)">
+				<ion-icon slot="icon-only" ios="trash-outline" md="trash-sharp"></ion-icon>
+			</ion-button>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar color="light">
+		<ion-input class="comment-color" placeholder="{{'COMMENT_INPUT' | translate}}" maxlength="50" [(ngModel)]="userComment"></ion-input>
+		<ion-button slot="end" color="twitter" [disabled]="userComment===''"
+								(click)="addComment()">{{"SEND" | translate}}
+		</ion-button>
+	</ion-toolbar>
+</ion-footer>

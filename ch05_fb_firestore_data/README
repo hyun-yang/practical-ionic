@@ -1,0 +1,44 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start ch05_fb_firestore_data blank --type=angular
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+npm install firebase --save
+
+npm install @angular/fire --save
+
+npm install @ionic/lab --save-dev
+
+**페이지 추가**
+
+ionic g page edit
+
+**서비스 추가**
+
+ionic g service services/data
+
+ionic g service services/authentication
+
+ionic g service services/util
+
+
+**파이어스토어 규칙**
+
+rules_version = '2';
+
+service cloud.firestore {
+
+    match /databases/{database}/documents {
+        match /{document=**} {
+            allow read, write: if
+                request.time < timestamp.date(2021, 4, 30);
+        }
+    }
+}
+
+## 아이오닉 프로젝트 실행
+
+ionic serve --lab

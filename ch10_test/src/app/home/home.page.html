@@ -1,0 +1,60 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>{{"MEETUP_LIST" | translate}}</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="showSearchBar=true">
+				<ion-icon slot="icon-only" name="search"></ion-icon>
+			</ion-button>
+			<ion-button (click)="refresh()">
+				<ion-icon slot="icon-only" name="refresh"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+	<ion-toolbar *ngIf="showSearchBar">
+		<ion-searchbar *ngIf="showSearchBar" showCancelButton="focus" (ionCancel)="showSearchBar=false"
+									 (search)="onSearch($event.target.value)" placeholder="{{'SEARCH' | translate}}"></ion-searchbar>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let meetup of allMeetUp">
+		<ion-item>
+			<ion-icon slot="start" ios="map-outline" md="map-sharp"></ion-icon>
+			<ion-label>{{meetup.title}}</ion-label>
+			<ion-button fill="outline" slot="end" (click)="showDetail(meetup.id)">{{"MAP" | translate}}</ion-button>
+		</ion-item>
+		<ion-card-content style="white-space: pre-line;">
+			{{meetup.description}}
+		</ion-card-content>
+
+		<ion-row>
+			<ion-col>
+				<ion-button class="likes" fill="clear" size="small" (click)="addLike(meetup)">
+					<ion-icon slot="icon-only" ios="heart-outline" md="heart-sharp"></ion-icon>
+					<div>{{meetup.likes?.length}} Likes</div>
+				</ion-button>
+			</ion-col>
+			<ion-col>
+				<ion-button class="comment" fill="clear" size="small" (click)="showDetail(meetup.id)">
+					<ion-icon slot="icon-only" ios="chatbubble-outline" md="chatbubble-sharp"></ion-icon>
+					<div>{{meetup.comments?.length}} Comment</div>
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+		<ion-fab-button (click)="addNewMeetUp()">
+			<ion-icon name="add"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+
+	<ion-infinite-scroll (ionInfinite)="getData($event)">
+		<ion-infinite-scroll-content class="loading-center">
+			<img class="loading-image-size" src="../../assets/images/loader.gif"/>
+		</ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>

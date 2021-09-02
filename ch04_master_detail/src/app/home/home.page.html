@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      마스터 디테일 패턴
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let meetup of meetupList">
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <h2>{{meetup.title}}</h2>
+        <p>{{meetup.description}}</p>
+      </ion-label>
+
+      <ion-button color="primary" slot="end" (click)="openDetailPage(meetup)">
+        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button color="secondary" slot="end" (click)="showDetail(meetup)">
+        <ion-icon name="document-text-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label color="primary">양방향 바인딩</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" *ngIf="selectedMeetup" [(ngModel)]="selectedMeetup.title" name="title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" *ngIf="selectedMeetup" [(ngModel)]="selectedMeetup.description" name="description"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary">컴포넌트 바인딩</ion-label>
+  </ion-item>
+
+  <app-binding-test [meetup]="selectedMeetup"></app-binding-test>
+</ion-content>

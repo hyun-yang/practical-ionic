@@ -1,0 +1,7 @@
+{
+  "name": "ch12_mycoinprice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

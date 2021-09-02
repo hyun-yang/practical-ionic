@@ -1,0 +1,28 @@
+<ion-app>
+	<ion-split-pane contentId="main-content">
+		<ion-menu contentId="main-content" type="overlay" side="start">
+			<ion-content>
+				<div class="header-background-image">
+					<div class="userInfo">
+						<p>{{userInfo?.displayName}}</p>
+						<p>{{userInfo?.email}}</p>
+					</div>
+				</div>
+				<ion-list id="list">
+					<ion-menu-toggle auto-hide="false" *ngFor="let page of appPages">
+						<ion-item routerDirection="root" [routerLink]="[page.url]" lines="none" detail="false">
+							<ion-icon slot="start" [ios]="page.icon + '-outline'" [md]="page.icon + '-sharp'"></ion-icon>
+							<ion-label>{{page.title | translate}}</ion-label>
+						</ion-item>
+					</ion-menu-toggle>
+					<ion-item routerDirection="root" (click)="authenticationService.signOut()" [routerLink]="['/login']"
+										lines="none" detail="false">
+						<ion-icon slot="start" ios="log-out-outline" md="log-out"></ion-icon>
+						<ion-label>{{"LOGOUT" | translate}}</ion-label>
+					</ion-item>
+				</ion-list>
+			</ion-content>
+		</ion-menu>
+		<ion-router-outlet id="main-content"></ion-router-outlet>
+	</ion-split-pane>
+</ion-app>

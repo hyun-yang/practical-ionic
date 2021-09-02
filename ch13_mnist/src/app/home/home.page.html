@@ -1,0 +1,44 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title class="ion-text-center">숫자 인식</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-text-center">
+		<h2>정확도 : {{accuracyResult}}</h2>
+	</div>
+
+	<ion-list>
+
+		<ion-item>
+			<ion-label position="stacked">모델</ion-label>
+			<ion-select [(ngModel)]="selectedModel" interface="popover">
+				<ion-select-option *ngFor="let item of pretrainedModelList" [value]="item.value">{{item.id}}</ion-select-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item>
+			<ion-label position="stacked">테스트 데이터</ion-label>
+			<ion-select [(ngModel)]="selectedDataSet" interface="popover">
+				<ion-select-option *ngFor="let item of testDataSetDropDownSelect" [value]="item.value">{{item.id}}</ion-select-option>
+			</ion-select>
+		</ion-item>
+	</ion-list>
+
+	<ion-list>
+		<ion-item *ngFor="let number of predictResultLabelList">
+			<ion-icon name="{{number.correct ? 'checkbox':'alert'}}" slot="start"
+								class="{{number.correct ? 'correct':'wrong'}}"></ion-icon>
+			<p><strong>정답 : {{number.xtest}} , 예측 : {{number.ylabel}}</strong></p>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="testPreTrainedModel()">숫자 인식</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

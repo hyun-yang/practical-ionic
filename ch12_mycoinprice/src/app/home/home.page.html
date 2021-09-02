@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>코인 가격</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="updatePriceInfo()">
+				<ion-icon slot="icon-only" name="refresh"></ion-icon>
+			</ion-button>
+			<ion-button (click)="addCoin()">
+				<ion-icon slot="icon-only" name="add"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let coin of cryptoCurrencyService.coins" (click)="editCoin(coin)" detail>
+			<ion-icon name="{{(coin.upOrDown > 0) ? 'arrow-up':'arrow-down'}}" slot="start"
+								class="{{(coin.upOrDown > 0) ? 'upArrow':'downArrow'}}"></ion-icon>
+			<ion-label class="ion-text-wrap">
+				<p><strong>{{coin.name.toUpperCase()}}</strong></p>
+				<p class="coinPrice"><strong>가격 : {{this.DOLLAR_SIGN}}{{coin.value}}</strong></p>
+				<p class="coinPrice"><strong>개수 : {{coin.amount}}</strong></p>
+				<p class="coinPrice"><strong>등락 : {{coin.upOrDown}} %</strong></p>
+				<p class="{{(coin.upOrDown > 0) ? 'upColor':'downColor'}}">
+					<strong>{{this.DOLLAR_SIGN}}{{coin.amount * coin.value}}</strong></p>
+			</ion-label>
+
+		</ion-item>
+	</ion-list>
+</ion-content>
+<ion-footer>
+	<div class="ion-text-center">
+		<p><strong>총액(USD) : </strong>{{this.DOLLAR_SIGN}}{{cryptoCurrencyService.getTotalValue()}}</p>
+	</div>
+</ion-footer>

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ch13_mnist",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

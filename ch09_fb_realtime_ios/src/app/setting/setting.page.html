@@ -1,0 +1,65 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>{{"SETTING" | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-list-header>
+			<ion-label>{{"LANGUAGE" | translate}}</ion-label>
+		</ion-list-header>
+
+		<ion-item>
+			<ion-label>{{"LANGUAGE" | translate}}</ion-label>
+			<ion-select [value]="this.languageService.language" (ionChange)="languageSelect($event.detail.value)" interface="popover">
+				<ion-select-option value="en">{{"ENGLISH" | translate}}</ion-select-option>
+				<ion-select-option value="kr">{{"KOREAN" | translate}}</ion-select-option>
+			</ion-select>
+		</ion-item>
+	</ion-list>
+
+	<ion-list>
+		<ion-list-header>
+			<ion-label>{{"THEME" | translate}}</ion-label>
+		</ion-list-header>
+
+		<ion-radio-group [value]="this.themeService.theme" (ionChange)="themeSelect($event.detail.value)">
+			<ion-item>
+				<ion-label>{{"LIGHT_THEME" | translate}}</ion-label>
+				<ion-radio value="light"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>{{"DARK_THEME" | translate}}</ion-label>
+				<ion-radio value="dark"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+	<ion-list>
+		<ion-list-header>
+			<ion-label>{{"PAGINATION" | translate}}</ion-label>
+		</ion-list-header>
+
+		<ion-item-group>
+			<ion-item>
+				<ion-label>{{"PAGING_COUNT" | translate}}</ion-label>
+				<ion-input [(ngModel)]="this.utilService.recordsPerPage" type="number" pattern="[0-9]*"></ion-input>
+			</ion-item>
+		</ion-item-group>
+	</ion-list>
+	<ion-list>
+		<ion-list-header>
+			<ion-label>{{"MAP_SETTING" | translate}}</ion-label>
+		</ion-list-header>
+
+		<ion-item-group>
+			<ion-item>
+				<ion-label>{{"DEFAULT_MAP_ZOOM" | translate}}</ion-label>
+				<ion-input [(ngModel)]="this.utilService.MAP_MIN_ZOOM" min="10" max="20" type="number" pattern="[0-9]*"></ion-input>
+			</ion-item>
+		</ion-item-group>
+	</ion-list>
+</ion-content>

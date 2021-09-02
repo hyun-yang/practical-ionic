@@ -1,0 +1,7 @@
+{
+  "name": "ch09_firestore",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

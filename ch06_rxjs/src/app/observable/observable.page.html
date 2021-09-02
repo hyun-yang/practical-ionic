@@ -1,0 +1,40 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Observable</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="ofTest()">O</ion-button>
+			<ion-button (click)="fromTest()">F</ion-button>
+			<ion-button (click)="intervalTest()">I</ion-button>
+			<ion-button (click)="rangeTest()">R</ion-button>
+			<ion-button (click)="deferTest()">D</ion-button>
+			<ion-button (click)="generateTest()">G</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-textarea auto-grow="true" [(ngModel)]="output"></ion-textarea>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="createObservable()">Observable 생성</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="subscribeExecuteObservable()">Observable 구독과 실행</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="unsubscribeObservable()">Observable 해지</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="createSubject()">Subject 생성</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="clear()">초기화</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			문자 인식
+		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button (click)="copyOCRString()">
+				<ion-icon slot="icon-only" name="copy"></ion-icon>
+			</ion-button>
+			<ion-button (click)="reset()">
+				<ion-icon slot="icon-only" name="trash"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngIf="ocrText">
+		<ion-card-header>촬영한 이미지</ion-card-header>
+		<img [src]="'data:image/jpeg;base64,' + ocrText.imageData"/>
+		<ion-card-content>
+			<ion-card-header>인식 결과</ion-card-header>
+			<ion-list>
+				<ion-textarea>
+					{{ocrText.result}}
+				</ion-textarea>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+
+<ion-footer>
+	<div class="ion-text-center">
+		<ion-button (click)="takePhoto()">
+			<ion-icon name="camera"></ion-icon>
+			카메라 실행
+		</ion-button>
+	</div>
+</ion-footer>

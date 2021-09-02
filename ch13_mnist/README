@@ -1,0 +1,19 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start ch13_mnist blank --type=angular --capacitor
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+npm i @tensorflow/tfjs --save
+
+npm i @ionic/lab --save-dev
+
+**서비스 추가**
+
+ionic g service services/util
+
+## 아이오닉 프로젝트 실행
+
+ionic serve --lab

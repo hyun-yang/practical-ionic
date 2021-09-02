@@ -1,0 +1,27 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start ch08 blank --type=angular
+
+7장 프로젝트에 테마와 다국어를 추가한다
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+**테마**
+
+ionic g service services/theme
+
+npm i @ionic/storage-angular --save
+
+**다국어**
+
+ionic g service services/language
+
+npm i @ngx-translate/core --save
+
+npm i @ngx-translate/http-loader --save
+
+## 아이오닉 프로젝트 실행
+
+ionic serve --lab

@@ -1,0 +1,9 @@
+<div *ngIf="meetup">
+  <h2>ID: {{meetup.id}}</h2>
+  <div>
+    <ion-input [(ngModel)]="meetup.title"></ion-input>
+  </div>
+  <div>
+    <ion-input [(ngModel)]="meetup.description"></ion-input>
+  </div>
+</div>

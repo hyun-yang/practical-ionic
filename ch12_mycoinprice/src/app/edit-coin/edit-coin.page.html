@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>코인 정보</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="removeCoin(coin)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="stacked">가상 화폐</ion-label>
+      <ion-select [(ngModel)]="coin.name" interface="popover">
+        <ion-select-option *ngFor="let item of topTenCoinList" [value]="item.id">{{item.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">갯수</ion-label>
+      <ion-input [(ngModel)]="coin.amount" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">메모</ion-label>
+      <ion-textarea [(ngModel)]="coin.comment" type="string" maxlength="50"></ion-textarea>
+    </ion-item>
+
+    <ion-card>
+      <ion-card-content class="ion-no-padding">
+        <canvas #coinChart></canvas>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-list>
+  <div class="ion-text-center">
+    <ion-button shape="round" fill="solid" (click)="updateCoin()">수정</ion-button>
+  </div>
+</ion-content>

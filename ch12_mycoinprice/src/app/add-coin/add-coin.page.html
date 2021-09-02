@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-back-button></ion-back-button>
+		</ion-buttons>
+		<ion-title>코인 추가</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid class="ion-no-padding">
+		<form [formGroup]="coinForm">
+			<ion-item>
+				<ion-label position="stacked">코인 선택</ion-label>
+				<ion-select interface="popover" formControlName="name" required>
+					<ion-select-option *ngFor="let item of topTenCoinList" [value]="item.id">{{item.name}}</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="stacked">갯수</ion-label>
+				<ion-input type="number" formControlName="amount" required></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="stacked">메모</ion-label>
+				<ion-textarea type="string" maxlength="50" formControlName="comment" required></ion-textarea>
+			</ion-item>
+		</form>
+	</ion-grid>
+	<div class="ion-text-center">
+		<ion-button shape="round" fill="solid" (click)="addCoin()">추가</ion-button>
+	</div>
+</ion-content>

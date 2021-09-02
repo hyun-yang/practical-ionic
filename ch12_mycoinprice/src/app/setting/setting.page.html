@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>환경 설정</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-list-header>
+			<ion-label class="ion-text-lg-center">시간 설정</ion-label>
+		</ion-list-header>
+
+		<ion-radio-group [(ngModel)]="cryptoCurrencyService.interval">
+			<ion-item>
+				<ion-label>30분</ion-label>
+				<ion-radio value="m30"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>1시간</ion-label>
+				<ion-radio value="h1"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label>6시간</ion-label>
+				<ion-radio value="h6"></ion-radio>
+			</ion-item>
+		</ion-radio-group>
+	</ion-list>
+</ion-content>

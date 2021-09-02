@@ -1,0 +1,61 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-title>{{"HOME" | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<img class="logo" src="assets/logo.jpg" alt="">
+	<form [formGroup]="userForm">
+		<ion-item>
+			<ion-label>
+				<ion-icon ios="mail-outline" md="mail-sharp"></ion-icon>
+			</ion-label>
+			<ion-input type="email" placeholder="{{'EMAIL_INPUT' | translate}}" formControlName="email" required></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="isSubmitted && !userForm.controls.email.valid">
+			<p>{{"EMAIL_ERROR" | translate}}</p>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>
+				<ion-icon ios="lock-closed-outline" md="lock-closed-sharp"></ion-icon>
+			</ion-label>
+			<ion-input type="password" placeholder="{{'PASSWORD_INPUT' | translate}}" formControlName="password" required></ion-input>
+		</ion-item>
+
+		<ion-item *ngIf="isSubmitted && !userForm.controls.password.valid">
+			<p>{{"PASSWORD_ERROR" | translate}}</p>
+		</ion-item>
+
+		<div class="ion-text-center">
+			<ion-button class="ion-margin-top" fill="solid" (click)="signIn()">{{"LOGIN" | translate}}</ion-button>
+		</div>
+	</form>
+
+	<ion-grid class="ion-margin-top">
+		<ion-row class="ion-text-center ion-justify-content-center">
+			<ion-col size="3">
+				<ion-button class="google" (click)="signInWithGoogle()">
+					<ion-icon name="logo-google"></ion-icon>
+				</ion-button>
+			</ion-col>
+			<ion-col size="3">
+				<ion-button class="facebook" (click)="signInWithFacebook()">
+					<ion-icon name="logo-facebook"></ion-icon>
+				</ion-button>
+			</ion-col>
+			<ion-col size="3">
+				<ion-button class="apple" (click)="signInWithApple()">
+					<ion-icon name="logo-apple"></ion-icon>
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<div class="align-bottom ion-text-center">
+		<ion-button fill="clear" (click)="forgotPassword()">{{"FORGOT_PASSWORD" | translate}}</ion-button>
+		<ion-button fill="clear" (click)="signUp()">{{"REGISTER" | translate}}</ion-button>
+	</div>
+</ion-content>

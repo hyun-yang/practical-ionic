@@ -1,0 +1,29 @@
+#map {
+	height: 70%;
+}
+
+.footer-height {
+	height: 35px !important;
+}
+
+.comment-color {
+	color: #202020;
+	background-color: transparent;
+}
+
+.comment-button-color {
+	color: #07b9ff;
+}
+
+.comment-text {
+	font-size: 0.8em;
+}
+
+.underline-blue-text {
+	--color: #3291ff;
+	text-underline: #4c8dff;
+}
+
+.item-input ion-label {
+	pointer-events:all !important;
+}

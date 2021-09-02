@@ -1,0 +1,7 @@
+{
+  "name": "ch07_ios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

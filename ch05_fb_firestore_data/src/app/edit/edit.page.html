@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>수정하기</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <form [formGroup]="dataForm">
+      <ion-item>
+        <ion-label position="floating">이름</ion-label>
+        <ion-input type="text" formControlName="name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">제목</ion-label>
+        <ion-input type="text" formControlName="title" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">부 제목</ion-label>
+        <ion-input type="text" formControlName="subtitle" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">설명</ion-label>
+        <ion-input type="text" formControlName="description" required>
+        </ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" fill="outline" color="primary" (click)="updateTestData()">
+        수정 하기
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

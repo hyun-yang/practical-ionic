@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar color="primary">
+		<ion-buttons slot="start">
+			<ion-menu-button autoHide="false"></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Operator</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list *ngFor="let operator of operatorList">
+		<ion-item (click)="goOperatorPage(operator)">
+			<ion-label>
+				{{operator}}
+			</ion-label>
+			<ion-button color="secondary" slot="start">
+				<ion-icon name="options-outline"></ion-icon>
+			</ion-button>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<ion-row>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="reduceExample1()">Reduce 더하기</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="reduceExample2()">Reduce 곱하기</ion-button>
+		</ion-col>
+		<ion-col>
+			<ion-button expand="block" fill="outline" color="primary" (click)="mapReduceFilterExample()">Map-Reduce-Filter</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

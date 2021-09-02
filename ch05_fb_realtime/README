@@ -1,0 +1,39 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start ch05_fb_realtime blank --type=angular
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+npm install firebase --save
+
+npm install @angular/fire --save
+
+npm install @ionic/lab --save-dev
+
+**페이지 추가**
+
+ionic g page edit
+
+**서비스 추가**
+
+ionic g service services/data
+
+ionic g service services/authentication
+
+ionic g service services/util
+
+**실시간 데이터베이스 규칙**
+
+{
+
+    "rules": {
+        ".read": true,		
+        ".write": true
+    }
+}
+
+## 아이오닉 프로젝트 실행
+
+ionic serve --lab

@@ -1,0 +1,7 @@
+{
+  "name": "ch09_realtime",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
