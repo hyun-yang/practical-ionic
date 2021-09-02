@@ -1,5 +1,5 @@
 # 아이오닉 앱 프로그래밍
-<img src="https://user-images.githubusercontent.com/2142419/131763370-10a3b819-69c7-4f1a-a2be-b5b307e15497.jpg  width="300" height="424"/>
+![bookcover_300_424](https://user-images.githubusercontent.com/2142419/131763775-6bfb1cb6-b1c7-4ec6-a514-90f1a41a1661.jpg)
 
 ## 소개
 실전 아이오닉 앱 프로그래밍은 크로스 플랫폼 앱과 프로그레시브 웹 앱을  빠르고 쉽게 구현하는 방법을 알려줍니다. 독자는 아이오닉 플랫폼을 사용하여 KMeetUp 소셜 앱, 프로그레시브 가상 화폐 웹 앱, 기계 학습 앱을 개발합니다.
