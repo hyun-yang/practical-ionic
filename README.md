@@ -24,7 +24,7 @@
 
 ![mycoin_600_1](https://user-images.githubusercontent.com/2142419/133862018-3253d8af-eb9f-46d0-882b-011bca662dbb.png)
 
-#### 기계 학습 앱 - MyIR, MyOCR
+#### 기계 학습 앱 - MyIR, MyOCR, MyMNIST
 
 ![machine_learning](https://user-images.githubusercontent.com/2142419/133861704-8f180483-10ad-4830-8f92-4ac27aebd8dc.png)
 
