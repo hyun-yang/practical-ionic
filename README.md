@@ -16,12 +16,26 @@
 
 이 책은 웹 표준 기술을 바탕으로 아이오닉 플랫폼을 실무에 적용하고 싶은 코딩 입문자/개발자에게 제대로 된 활용서가 될 것입니다.
 
+#### 소셜 앱 - KMeetUp
+
+![](../github_screenshot/kmeetup_600_301.png)
+
+#### 프로그레시브 웹 앱 - MyCoin
+
+![](../github_screenshot/mycoin_300_1.png)
+![](../github_screenshot/mycoin_300_2.png)
+
+
+#### 기계 학습 앱 - MyIR, MyOCR
+
+![](../github_screenshot/machine_learning.png)
+
 ## 대상 독자
 입문자부터 웹 표준 기술에 익숙한 웹 디자이너와 개발자를 위해 만들었습니다.
 실무 중심 예제를 처음부터 개발하고 완성해나가면서 아이오닉 플랫폼, 외부 서비스 연동 및 다양한 플러그인의 사용법을 알기 쉽게 배울 수 있습니다.
 
 ## 유튜브 강좌
-옆집 개발자 유튜브 채널을 참고하세요. 
+[옆집 개발자](https://www.youtube.com/channel/UCscfQkbKZXDXph37Pt_opKw) 유튜브 채널을 참고하세요.
 
 ## 예제 코드 구성
 |장|프로젝트 이름|프로젝트 설명
