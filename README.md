@@ -1,18 +1,11 @@
 # 아이오닉 앱 프로그래밍
 ![bookcover_300_424](https://user-images.githubusercontent.com/2142419/131763775-6bfb1cb6-b1c7-4ec6-a514-90f1a41a1661.jpg)
 
-이북 구입처
-
-Yes24 : <a href="http://www.yes24.com/Product/Goods/103767920">아이오닉 앱 프로그래밍</a>
-
-알라딘 :
-
-인터파크 :
-
-교보문고 :
-
-유페이퍼 : <a href="https://www.upaper.net/iamyhs/1145767">아이오닉 앱 프로그래밍</a>
-
+* Yes24 : <a href="http://www.yes24.com/Product/Goods/103767920" target="_blank">아이오닉 앱 프로그래밍</a>
+* 알라딘 : 
+* 인터파크 :
+* 교보문고 :
+* 유페이퍼 : <a href="https://www.upaper.net/iamyhs/1145767" target="_blank">아이오닉 앱 프로그래밍</a>
 
 ## 소개
 #### HTML + CSS + 자바스크립트를 이용한 크로프 플랫폼 아이오닉 실무 개발서!
