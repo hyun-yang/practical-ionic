@@ -20,10 +20,6 @@
 
 ![kmeetup_600_301](https://user-images.githubusercontent.com/2142419/133861693-dc61bb04-a1f5-47ef-9d74-9d3d0982b382.png)
 
-#### RxJS
-
-![rxjs](https://user-images.githubusercontent.com/2142419/133910680-e64041e5-6c92-4064-89d6-162b6f02ce43.png)
-
 #### 프로그레시브 웹 앱 - MyCoin
 
 ![mycoin_600_1](https://user-images.githubusercontent.com/2142419/133862018-3253d8af-eb9f-46d0-882b-011bca662dbb.png)
@@ -31,6 +27,10 @@
 #### 기계 학습 앱 - MyIR, MyOCR, MyMNIST
 
 ![machine_learning](https://user-images.githubusercontent.com/2142419/133861704-8f180483-10ad-4830-8f92-4ac27aebd8dc.png)
+
+#### RxJS
+
+![rxjs](https://user-images.githubusercontent.com/2142419/133910680-e64041e5-6c92-4064-89d6-162b6f02ce43.png)
 
 ## 대상 독자
 입문자부터 웹 표준 기술에 익숙한 웹 디자이너와 개발자를 위해 만들었습니다.
