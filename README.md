@@ -2,9 +2,8 @@
 ![bookcover_300_424](https://user-images.githubusercontent.com/2142419/131763775-6bfb1cb6-b1c7-4ec6-a514-90f1a41a1661.jpg)
 
 * Yes24 : [아이오닉 앱 프로그래밍](http://www.yes24.com/Product/Goods/103767920)
-* 알라딘 : 
-* 인터파크 :
-* 교보문고 :
+* 알라딘 : [아이오닉 앱 프로그래밍](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280050552)
+* 교보문고 : [아이오닉 앱 프로그래밍](https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&barcode=4801167637889&orderClick=LAG&Kc=)
 * 유페이퍼 : [아이오닉 앱 프로그래밍](https://www.upaper.net/iamyhs/1145767)
 
 ## 소개
