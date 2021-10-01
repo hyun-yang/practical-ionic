@@ -35,7 +35,7 @@ export class HomePage implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.getData('');
+		this.getData();
 	}
 
 	ngOnDestroy(): void {
@@ -44,7 +44,7 @@ export class HomePage implements OnInit, OnDestroy {
 		}
 	}
 
-	getData(event: any) {
+	getData(event: any = '') {
 		console.log('데이터 호출');
 		if (!this.endOfData) {
 			++this.pageSize;
@@ -80,7 +80,7 @@ export class HomePage implements OnInit, OnDestroy {
 	}
 
 	refresh(): void {
-		this.getData('');
+		this.getData();
 	}
 
 	showDetail(meetupId: string) {

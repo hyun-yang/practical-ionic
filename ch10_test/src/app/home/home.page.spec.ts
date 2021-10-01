@@ -59,7 +59,7 @@ describe('Home Page', () => {
 	it('should call getData', () => {
 		const dataService = fixture.debugElement.injector.get(DataService);
 		spyOn(dataService, 'getData').and.callThrough();
-		component.getData('');
+		component.getData();
 		expect(dataService.getData).toHaveBeenCalled();
 	});
 

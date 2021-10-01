@@ -35,7 +35,7 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getData('');
+    this.getData();
   }
 
   ngOnDestroy(): void {
@@ -44,7 +44,7 @@ export class HomePage implements OnInit, OnDestroy {
     }
   }
 
-  getData(event: any) {
+  getData(event: any = '') {
     if (!this.endOfData) {
       ++this.pageSize;
     }
@@ -79,7 +79,7 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   refresh(): void {
-    this.getData('');
+    this.getData();
   }
 
   showDetail(meetupId: string) {
