@@ -106,3 +106,12 @@ IDE 선택은 각자 취향에 맞는 걸 선택합니다. 아래는 대표적�
 이 저장소의 소스 코드는 [MIT](http://www.opensource.org/licenses/MIT) 라이선스를 따릅니다
 
 ## 책의 오류 수정
+아래 home.page.ts 컴포넌트 getListPagination 함수의 기본값 인자를 변경합니다. 
+* ch06_rxjs\src\app\home\home.page.ts
+
+아래 home.page.ts 컴포넌트 getData 함수의 기본값 인자를 변경합니다.
+* ch09_fb_firestore\src\app\home\home.page.ts 
+* ch09_fb_realtime\src\app\home\home.page.ts 
+* ch09_fb_realtime_ios\src\app\home\home.page.ts 
+* ch10_test\src\app\home\home.page.ts 
+* ch10_test\src\app\home\home.page.spec.ts 
