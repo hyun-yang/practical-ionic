@@ -29,7 +29,7 @@ export class HomePage implements OnInit, OnDestroy {
 	}
 
 	ngOnInit(): void {
-		this.getListPagination(' ');
+		this.getListPagination();
 	}
 
 	ngOnDestroy(): void {
@@ -38,7 +38,7 @@ export class HomePage implements OnInit, OnDestroy {
 		}
 	}
 
-	async getListPagination(startAtKey?: string) {
+	async getListPagination(startAtKey: string = ' ') {
 		if (this.itemsSubscription) {
 			this.itemsSubscription.unsubscribe();
 		}
@@ -67,7 +67,7 @@ export class HomePage implements OnInit, OnDestroy {
 	}
 
 	refresh(): void {
-		this.getListPagination(' ');
+		this.getListPagination();
 	}
 
 	getPrev() {
