@@ -44,7 +44,7 @@ export class HomePage implements OnInit, OnDestroy {
 		}
 	}
 
-	getData(event: any = '') {
+	getData(event: any = null) {
 		console.log('데이터 호출');
 		if (!this.endOfData) {
 			++this.pageSize;

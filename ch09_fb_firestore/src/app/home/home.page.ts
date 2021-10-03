@@ -44,7 +44,7 @@ export class HomePage implements OnInit, OnDestroy {
     }
   }
 
-  getData(event: any = '') {
+  getData(event: any = null) {
     if (!this.endOfData) {
       ++this.pageSize;
     }
