@@ -107,6 +107,20 @@ IDE 선택은 각자 취향에 맞는 걸 선택합니다. 아래는 대표적�
 
 ## 책의 오류 수정
 
+### 한국어 파일(kr.json) 수정 
+'다크 테마' 문자열을 '어두운 테마'로 변경합니다.
+
+~~다크 테마~~
+
+어두운 테마
+
+* ch08\src\assets\language\kr.json
+* ch09_fb_firestore\src\assets\language\kr.json
+* ch09_fb_realtime\src\assets\language\kr.json
+* ch09_fb_realtime_ios\src\assets\language\kr.json
+* ch10_test\src\assets\language\kr.json
+
+
 ### 164 페이지
 아래 home.page.ts 컴포넌트 getListPagination 함수의 기본값 인자를 변경합니다. 
 * ch06_rxjs\src\app\home\home.page.ts
