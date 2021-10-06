@@ -62,7 +62,7 @@
 	"DEFAULT_MAP_ZOOM": "기본 지도 줌 레벨",
 	"THEME": "테마 설정",
 	"LIGHT_THEME": "밝은 테마",
-	"DARK_THEME": "다크 테마",
+	"DARK_THEME": "어두운 테마",
 	"IOS_ONLY_HEADER": "iOS 전용",
 	"IOS_ONLY_MSG": "이 기능은 iOS 버전 13 이상이 필요합니다."
 }
