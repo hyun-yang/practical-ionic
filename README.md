@@ -38,6 +38,33 @@
 ## 유튜브 강좌
 [옆집 개발자](https://www.youtube.com/channel/UCscfQkbKZXDXph37Pt_opKw) 유튜브 채널을 참고하세요.
 
+### 설치
+[윈도우즈에 아이오닉 설치하기  | How to install Ionic on Windows 10](https://youtu.be/2RKxJ499K54)
+
+[맥에 아이오닉 설치하기 | How to install Ionic on Mac Big Sur](https://youtu.be/iBhMFC7GiDA)
+
+[우분투에 아이오닉 설치하기 | How to install Ionic on Ubuntu 20.04](https://youtu.be/jTQIrL-GPP0)
+
+### 통합 개발 환경(IDE) 설정
+[비주얼 스튜디오 코드 시작하기](https://youtu.be/MYg3As0BdUA)
+
+[웹스톰 시작하기](https://youtu.be/9BhKBljNm48)
+
+### 아이오닉 입문
+[아이오닉 앱 생명주기](https://youtu.be/kF0_f8lV_88)
+
+[아이오닉 마스터 디테일 패턴](https://youtu.be/vS-mSwixsdo)
+
+[아이오닉 데이터 바인딩](https://youtu.be/NJ-oSaf3LNU)
+
+### 아이오닉 심화
+[파이어베이스 프로젝트 만들기와 앱 추가하기](https://youtu.be/aM12XFq0SQw)
+
+[comment]: <> (### 아이오닉 응용)
+
+### 아이오닉 최신 소식
+[아이오닉 2021 이벤트 소식](https://youtu.be/f6FKPyih50Q)
+
 ## 예제 코드 구성
 |장|프로젝트 이름|프로젝트 설명
 |:----|:----|:----|
@@ -145,3 +172,5 @@ async getListPagination(startAtKey: string = ' ') {...}
 ~~getData(event:any){...}~~
 
 getData(event: any = null) {...}
+
+[comment]: <> (## 추가 사항)
