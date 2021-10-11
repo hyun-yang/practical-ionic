@@ -10,6 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "Ionic lab": "ionic serve --lab",
+    "Ionic lab2": "ionic serve --lab -p 8101 -r 8102 --dev-logger-port 8103",
     "resources": "cordova-res android --skip-config && node scripts/resources.js"
   },
   "private": true,
