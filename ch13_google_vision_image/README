@@ -16,7 +16,7 @@ npm i @ionic/lab --save-dev
 
 ionic g service services/util
 
-**HttpClientModule**
+**HttpClientModule 추가**
 
 app.module.ts 파일을 열고 HttpClientModule 추가합니다.
 
