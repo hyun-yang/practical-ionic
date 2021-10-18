@@ -38,6 +38,9 @@
 ## 유튜브 강좌
 [옆집 개발자](https://www.youtube.com/channel/UCscfQkbKZXDXph37Pt_opKw) 유튜브 채널을 참고하세요.
 
+### 책 소개
+[아이오닉 앱 프로그래밍 책 소개](https://youtu.be/gUnPs1o0W58)
+
 ### 설치
 [윈도우즈에 아이오닉 설치하기  | How to install Ionic on Windows 10](https://youtu.be/2RKxJ499K54)
 
