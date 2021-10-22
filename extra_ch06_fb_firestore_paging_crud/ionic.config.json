@@ -1,0 +1,7 @@
+{
+  "name": "extra_ch06_fb_firestore_paging_crud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

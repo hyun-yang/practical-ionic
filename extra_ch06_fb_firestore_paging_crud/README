@@ -1,0 +1,44 @@
+## 아이오닉 프로젝트 만들기
+
+ionic start extra_ch06_fb_firestore_paging_crud blank --type=angular --capacitor
+
+
+## 아이오닉 프로젝트 설정
+
+**패키지 설치**
+
+npm install firebase --save
+
+npm install @ionic/lab --save-dev
+
+
+**서비스 추가**
+
+ionic g service services/data
+
+ionic g service services/util
+
+
+**파이어스토어 규칙**
+
+rules_version = '2';
+
+service cloud.firestore {
+
+    match /{document=**} {
+
+        allow read, write: if true;
+    }
+
+}
+
+## npm 스크립트 추가 ##
+
+package.json 두 개의 스크립트 추가
+
+    "Ionic lab": "ionic serve --lab",
+    "Ionic lab2": "ionic serve --lab -p 8101 -r 8102 --dev-logger-port 8103"
+
+## 아이오닉 프로젝트 실행
+
+ionic serve --lab

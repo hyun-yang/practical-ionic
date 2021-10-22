@@ -99,6 +99,8 @@
 |13장|ch13_google_vision_ocr|기계 학습 문자 인식|
 |13장|ch13_mnist|기계 학습 숫자 인식|
 |13장|ch13_mnist_canvas|기계 학습 숫자 그리기 인식|
+|추가|extra_ch06_fb_firestore_paging_crud|파이어스토어 페이지네이션과 무한 스크롤 예제|
+
 
 ## 예제 실행 방법
 먼저 예제 폴더로 이동합니다.   
@@ -178,4 +180,8 @@ async getListPagination(startAtKey: string = ' ') {...}
 
 getData(event: any = null) {...}
 
-[comment]: <> (## 추가 사항)
+## 추가 사항
+
+|장|프로젝트 이름|프로젝트 설명
+|:----|:----|:----|
+|추가|extra_ch06_fb_firestore_paging_crud|파이어스토어 페이지네이션과 무한 스크롤 예제|

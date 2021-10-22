@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>리스트 - {{allMeetUp.length}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="refresh()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor = "let meetup of allMeetUp">
+    <ion-item>
+      <ion-icon slot="start" ios="map-outline" md="map-sharp"></ion-icon>
+      <ion-label>{{meetup.title}}</ion-label>
+    </ion-item>
+    <ion-card-content style="white-space: pre-line;">
+      {{meetup.description}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="getData($event)">
+    <ion-infinite-scroll-content class="loading-center">
+      <img class="loading-image-size" src="../../assets/images/loader.gif"/>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
