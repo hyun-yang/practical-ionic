@@ -106,7 +106,6 @@
 |13장|ch13_google_vision_ocr|기계 학습 문자 인식|
 |13장|ch13_mnist|기계 학습 숫자 인식|
 |13장|ch13_mnist_canvas|기계 학습 숫자 그리기 인식|
-|추가|extra_ch06_fb_firestore_paging_crud|파이어스토어 페이지네이션과 무한 스크롤 예제|
 
 
 ## 예제 실행 방법
@@ -188,7 +187,11 @@ async getListPagination(startAtKey: string = ' ') {...}
 getData(event: any = null) {...}
 
 ## 추가 사항
+아래 프로젝트는 책 출간 이후에 추가한 내용입니다. 옆집 개발자 유튜브 채널의 동영상을 참고하세요.
 
-|장|프로젝트 이름|프로젝트 설명
+|프로젝트 이름|프로젝트 설명|강좌 링크
 |:----|:----|:----|
-|추가|extra_ch06_fb_firestore_paging_crud|파이어스토어 페이지네이션과 무한 스크롤 예제|
+|extra_ch06_fb_firestore_paging_crud|페이지네이션과 무한 스크롤 파트 1|https://youtu.be/0XtsnVX7e2Y
+|extra_ch06_fb_firestore_paging_crud|페이지네이션과 무한 스크롤 파트 2|https://youtu.be/4HZ9aV8a14s
+|N/A|텐서플로우로 학습된 모델 변환|https://youtu.be/JPtXysC34xI
+
