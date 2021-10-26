@@ -65,9 +65,14 @@
 
 [파이어베이스 실시간 데이터베이스와 파이어스토어 테스트 데이터 입력/삭제](https://youtu.be/zaQDv4ZEXKA)
 
-[파이어베이스 파이어스토어 페이지네이션과 무한 스크롤 파트 1 ](https://youtu.be/0XtsnVX7e2Y)
+[파이어베이스 파이어스토어 페이지네이션과 무한 스크롤 파트 1](https://youtu.be/0XtsnVX7e2Y)
 
-[comment]: <> (### 아이오닉 응용)
+[파이어베이스 파이어스토어 페이지네이션과 무한 스크롤 파트 2](https://youtu.be/4HZ9aV8a14s)
+
+### 아이오닉 응용
+[광학 문자 인식, OCR 앱 만들기](https://youtu.be/45xESzv68w4)
+
+[텐서플로우로 학습된 모델 변환](https://youtu.be/JPtXysC34xI)
 
 ### 아이오닉 최신 소식
 [아이오닉 2021 이벤트 소식](https://youtu.be/f6FKPyih50Q)
