@@ -1,13 +1,18 @@
 # 아이오닉 앱 프로그래밍
-![bookcover_300_424](https://user-images.githubusercontent.com/2142419/131763775-6bfb1cb6-b1c7-4ec6-a514-90f1a41a1661.jpg)
+![bookcover_300_424_new](https://user-images.githubusercontent.com/2142419/165875188-c4e48891-ee91-4465-8bd0-f13ddf454265.jpg)
 
 * Yes24 : [아이오닉 앱 프로그래밍](http://www.yes24.com/Product/Goods/103767920)
 * 알라딘 : [아이오닉 앱 프로그래밍](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=280050552)
 * 교보문고 : [아이오닉 앱 프로그래밍](https://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&barcode=4801167637889&orderClick=LAG&Kc=)
 * 유페이퍼 : [아이오닉 앱 프로그래밍](https://www.upaper.net/iamyhs/1145767)
 
+## 아이오닉 6 마이그레이션, 업그레이드
+
+2021년 12월 13일에 아이오닉 6가 정식으로 발표 됐습니다.
+[아이오닉 6 업그레이드 가이드](https://ionicframework.com/docs/intro/upgrading-to-ionic-6)
+
 ## 소개
-#### HTML + CSS + 자바스크립트를 이용한 크로프 플랫폼 아이오닉 실무 개발서!
+#### HTML + CSS + 타입스크립트를 이용한 크로프 플랫폼 아이오닉 실무 개발서!
 
 아이오닉 앱 프로그래밍은 크로스 플랫폼 앱과 프로그레시브 웹 앱을 빠르고 쉽게 구현하는 방법을 알려줍니다. 독자는 아이오닉 플랫폼을 사용하여 KMeetUp 소셜 앱, 프로그레시브 가상 화폐 웹 앱, 기계 학습 앱을 개발합니다.
 
@@ -77,6 +82,9 @@
 ### 아이오닉 최신 소식
 [아이오닉 2021 이벤트 소식](https://youtu.be/f6FKPyih50Q)
 
+### 아이오닉 6 신규 컴포넌트
+[아이오닉 6 신규 컴포넌트](https://youtu.be/7qXkKBan8mc)
+
 ## 예제 코드 구성
 |장|프로젝트 이름|프로젝트 설명
 |:----|:----|:----|
@@ -107,6 +115,15 @@
 |13장|ch13_mnist|기계 학습 숫자 인식|
 |13장|ch13_mnist_canvas|기계 학습 숫자 그리기 인식|
 
+## 추가 예제 코드
+아래 프로젝트는 책 출간 이후에 추가한 내용입니다. 옆집 개발자 유튜브 채널의 동영상을 참고하세요.
+
+|프로젝트 이름| 프로젝트 설명             |강좌 링크
+|:----|:--------------------|:----|
+|extra_ch06_fb_firestore_paging_crud| 페이지네이션과 무한 스크롤 파트 1 |https://youtu.be/0XtsnVX7e2Y
+|extra_ch06_fb_firestore_paging_crud| 페이지네이션과 무한 스크롤 파트 2 |https://youtu.be/4HZ9aV8a14s
+|N/A| 텐서플로우로 학습된 모델 변환    |https://youtu.be/JPtXysC34xI
+|extra_ionic6_new_components| 아이오닉 6 신규 컴포넌트      |https://youtu.be/7qXkKBan8mc
 
 ## 예제 실행 방법
 먼저 예제 폴더로 이동합니다.   
@@ -185,13 +202,3 @@ async getListPagination(startAtKey: string = ' ') {...}
 ~~getData(event:any){...}~~
 
 getData(event: any = null) {...}
-
-## 추가 사항
-아래 프로젝트는 책 출간 이후에 추가한 내용입니다. 옆집 개발자 유튜브 채널의 동영상을 참고하세요.
-
-|프로젝트 이름|프로젝트 설명|강좌 링크
-|:----|:----|:----|
-|extra_ch06_fb_firestore_paging_crud|페이지네이션과 무한 스크롤 파트 1|https://youtu.be/0XtsnVX7e2Y
-|extra_ch06_fb_firestore_paging_crud|페이지네이션과 무한 스크롤 파트 2|https://youtu.be/4HZ9aV8a14s
-|N/A|텐서플로우로 학습된 모델 변환|https://youtu.be/JPtXysC34xI
-

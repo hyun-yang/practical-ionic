@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Accordion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--<ion-accordion-group value="colors">-->
+  <!--두개의 확장 스타일: compact and inset-->
+  <!--toggleIcon, toggleIconSlot-->
+  <ion-accordion-group [multiple]="true" [value]="['colors', 'numbers']" expand="inset">
+
+    <ion-accordion value="colors">
+      <ion-item slot="header">
+        <ion-label>Colors</ion-label>
+      </ion-item>
+
+      <ion-list slot="content">
+        <ion-item button (click)="clickAccordionItem($event)">
+          <ion-label>Red</ion-label>
+        </ion-item>
+        <ion-item button (click)="clickAccordionItem($event)">
+          <ion-label>Green</ion-label>
+        </ion-item>
+        <ion-item button (click)="clickAccordionItem($event)">
+          <ion-label>Blue</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <ion-accordion value="shapes" toggleIcon="arrow-down-circle" toggleIconSlot="start">
+      <ion-item slot="header">
+        <ion-label>Shapes</ion-label>
+      </ion-item>
+
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>Circle</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Triangle</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Square</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <ion-accordion value="numbers">
+      <ion-item slot="header">
+        <ion-label>Numbers</ion-label>
+      </ion-item>
+
+      <ion-list slot="content">
+        <ion-item>
+          <ion-label>1</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>2</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>3</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <div class="ion-text-center">
+    <ion-button (click)="logAccordionValue()">열려있는 아코디언 그룹 값</ion-button>
+    <ion-button (click)="closeAccordion()">모두 닫기</ion-button>
+  </div>
+</ion-content>

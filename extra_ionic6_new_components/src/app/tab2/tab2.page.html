@@ -1,0 +1,143 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Breadcrumbs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--기본-->
+  <ion-breadcrumbs>
+    <ion-breadcrumb href="#">
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">
+      Electronics
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#photography">
+      Photography
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">
+      Cameras
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#film">
+      Film
+    </ion-breadcrumb>
+    <ion-breadcrumb>
+      35 mm
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!--컬러-->
+  <ion-breadcrumbs color="secondary">
+    <ion-breadcrumb href="#">
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">
+      Electronics
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#photography">
+      Photography
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!-- 아이콘 위치 처음 -->
+  <ion-breadcrumbs>
+    <ion-breadcrumb href="#">
+      <ion-icon slot="start" name="home"></ion-icon>
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#files">
+      <ion-icon slot="start" name="folder"></ion-icon>
+      Files
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#projects">
+      <ion-icon slot="start" name="folder"></ion-icon>
+      Projects
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!-- 아이콘 위치 끝-->
+  <ion-breadcrumbs>
+    <ion-breadcrumb href="#">
+      Home
+      <ion-icon slot="end" name="home"></ion-icon>
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#files">
+      Files
+      <ion-icon slot="end" name="folder"></ion-icon>
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#projects">
+      Projects
+      <ion-icon slot="end" name="folder"></ion-icon>
+    </ion-breadcrumb>
+
+  </ion-breadcrumbs>
+
+  <!-- 아이템 최대 갯수 제한 -->
+  <ion-breadcrumbs [maxItems]="4">
+    <ion-breadcrumb href="#">
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">
+      Electronics
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#photography">
+      Photography
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">
+      Cameras
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#film">
+      Film
+    </ion-breadcrumb>
+    <ion-breadcrumb>
+      35 mm
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!--확장-->
+  <ion-breadcrumbs [maxItems]="maxBreadcrumbs" (ionCollapsedClick)="expandBreadcrumbs()">
+    <ion-breadcrumb href="#">
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#home">
+      Electronics
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#photography">
+      Photography
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">
+      Cameras
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#film">
+      Film
+    </ion-breadcrumb>
+    <ion-breadcrumb>
+      35 mm
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <!--팝 오버-->
+  <ion-breadcrumbs [maxItems]="4" (ionCollapsedClick)="presentPopover($event)">
+    <ion-breadcrumb href="#">
+      Home
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#electronics">
+      Electronics
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#photography">
+      Photography
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#cameras">
+      Cameras
+    </ion-breadcrumb>
+    <ion-breadcrumb href="#film">
+      Film
+    </ion-breadcrumb>
+    <ion-breadcrumb>
+      35 mm
+    </ion-breadcrumb>
+  </ion-breadcrumbs>
+</ion-content>
